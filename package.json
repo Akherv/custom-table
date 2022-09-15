@@ -1,14 +1,17 @@
 {
   "name": "@smerinthee/custom-table",
-  "version": "1.0.0",
+  "version": "0.1.4",
   "description": "Custom table react component",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "private": "false",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-lib": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,14 +25,15 @@
   "homepage": "https://github.com/Akherv/custom-table#readme",
   "devDependencies": {
     "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@storybook/addon-actions": "^6.5.11",
-    "@storybook/addon-essentials": "^6.5.11",
-    "@storybook/addon-interactions": "^6.5.11",
-    "@storybook/addon-links": "^6.5.11",
-    "@storybook/builder-webpack4": "^6.5.11",
-    "@storybook/manager-webpack4": "^6.5.11",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.11",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
@@ -41,12 +45,6 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "styled-components": "^5.3.5"
-  },
-  "peerDependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
   }
 }

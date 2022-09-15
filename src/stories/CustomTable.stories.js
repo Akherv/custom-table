@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { CustomTable } from "../lib/CustomTable";
 
@@ -7,12 +8,6 @@ export default {
   argTypes: {
     datas: { control: "-" },
     columns: { control: "-" },
-    customColors: {
-      bg_1: {
-        control: { type: "color" },
-        presetColors: ["#c9d8c5"],
-      },
-    },
   },
 };
 

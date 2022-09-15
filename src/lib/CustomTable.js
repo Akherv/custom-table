@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -20,7 +21,7 @@ export const CustomTable = ({
 
   useEffect(() => {
     setRows(datas);
-  }, []);
+  }, [datas]);
 
   const [maxRows, setMaxRows] = useState(entriesDefaultLimit);
   const [searchWord, setSearchWord] = useState([]);
@@ -131,9 +132,9 @@ const Wrapper = styled.div`
 CustomTable.propTypes = {
   datas: PropTypes.arrayOf(PropTypes.object).isRequired,
   tableTitle: PropTypes.string,
-  columns: PropTypes.arrayOf(PropTypes.string).isRequired,
+  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   sortDefault: PropTypes.string.isRequired,
   entriesArr: PropTypes.arrayOf(PropTypes.number).isRequired,
   entriesDefaultLimit: PropTypes.number.isRequired,
-  customColors: PropTypes.object.isRequired,
+  customColors: PropTypes.object,
 };

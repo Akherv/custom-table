@@ -1,1 +1,1 @@
-export * from "./lib/CustomTable";
+export * from "./lib";
