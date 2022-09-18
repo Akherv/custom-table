@@ -1,6 +1,6 @@
 {
   "name": "@smerinthee/custom-table",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Custom table react component",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -17,6 +17,11 @@
     "type": "git",
     "url": "https://github.com/Akherv/custom-table.git"
   },
+  "keywords": [
+    "custom",
+    "table",
+    "react-component"
+  ],
   "author": "smerinthee",
   "license": "ISC",
   "bugs": {
